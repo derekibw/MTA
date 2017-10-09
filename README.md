@@ -1,4 +1,4 @@
-# MTA
+# QQMta
 
 An unofficial MTA SDK CocoaPods repository..
 
@@ -10,11 +10,11 @@ Release notes: [http://mta.qq.com/mta/ctr_index/download](http://mta.qq.com/mta/
 
 ## Usage
 
-Edit your podfile: 
+Edit your podfile:
 
-- Basic: `pod 'MTA'`
-- With AutoTrack: `pod 'MTA/AutoTrack'`
-- With IDFA: `pod 'MTA/IDFA'`
+- Basic: `pod 'QQMta'`
+- With AutoTrack: `pod 'QQMta/AutoTrack'`
+- With IDFA: `pod 'QQMta/IDFA'`
 
 ## License
 
