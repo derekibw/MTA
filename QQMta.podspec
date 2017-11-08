@@ -36,7 +36,6 @@ Pod::Spec.new do |s|
     ss.source_files         = 'SDK/plugin/installtracker/*.h'
     ss.public_header_files  = 'SDK/plugin/installtracker/*.h'
     ss.vendored_library     = 'SDK/plugin/installtracker/libidfa.a'
-    ss.frameworks           = 'AdSupport'
   end
 
 end
