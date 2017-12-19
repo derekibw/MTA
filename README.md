@@ -1,5 +1,5 @@
 # MTA
-MTA 官方CocoaPods Spec镜像
+非官方MTA CocoaPods Spec镜像
 
 ## 使用方法
 ### 基础统计功能
