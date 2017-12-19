@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name                  = 'QQMta'
-  s.version               = '2.1.1'
+  s.version               = '2.1.11'
   s.summary               = '"腾讯移动分析（MTA）'
   s.homepage              = 'http://mta.qq.com'
   s.authors               = { 'derekibw' => 'https://github.com/derekibw' }
@@ -23,6 +23,8 @@ Pod::Spec.new do |s|
   s.subspec 'AutoTrack' do |ss|
     ss.dependency         'QQMta/Core'
     ss.vendored_library = 'SDK/plugin/autotrack/libautotrack.a'
+    ss.source_files         = 'SDK/plugin/autotrack/*.h'
+    ss.public_header_files  = 'SDK/plugin/autotrack/*.h'
   end
 
   s.subspec 'IDFA' do |ss|
