@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name                  = 'QQMta'
-  s.version               = '2.0.8'
-  s.summary               = '专业的移动应用数据分析能力，为您的应用提供实时数据统计分析服务，监控版本质量、渠道状况、用户画像属性及用户细分行为，通过数据可视化展现，协助产品运营决策。'
+  s.version               = '2.1.1'
+  s.summary               = '"腾讯移动分析（MTA）'
   s.homepage              = 'http://mta.qq.com'
   s.authors               = { 'derekibw' => 'https://github.com/derekibw' }
   s.source                = { :git => 'https://github.com/derekibw/QQMta.git', :tag => s.version }
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     ss.source_files         = 'SDK/*.h'
     ss.public_header_files  = 'SDK/*.h'
     ss.vendored_library     = 'SDK/libmtasdk.a'
-    ss.frameworks           = 'UIKit', 'Foundation', 'QuartzCore', 'CoreGraphics', 'CoreTelephony', 'CFNetwork', 'Security', 'SystemConfiguration'
+    ss.frameworks           = 'CoreTelephony', 'CFNetwork', 'Security', 'SystemConfiguration'
     ss.libraries            = 'z', 'sqlite3'
   end
 
@@ -36,6 +36,13 @@ Pod::Spec.new do |s|
     ss.source_files         = 'SDK/plugin/installtracker/*.h'
     ss.public_header_files  = 'SDK/plugin/installtracker/*.h'
     ss.vendored_library     = 'SDK/plugin/installtracker/libinstalltracker.a'
+  end
+
+  spec.subspec 'Hybrid' do |ss|
+    ss.dependency       'QQMta/BasicAnalysis'
+    ss.vendored_libraries   = "SDK/plugin/hybrid/*.a"
+    ss.source_files       = "SDK/plugin/hybrid/*.h"
+    ss.public_header_files    = "SDK/plugin/hybrid/*.h"
   end
 
 end
