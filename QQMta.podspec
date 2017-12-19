@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary               = '"腾讯移动分析（MTA）'
   s.homepage              = 'http://mta.qq.com'
   s.authors               = { 'derekibw' => 'https://github.com/derekibw' }
-  s.source                = { :git => 'https://github.com/derekibw/QQMta.git', :tag => s.version }
+  s.source                = { :git => 'https://github.com/derekibw/MTA.git', :tag => s.version }
   s.license               = 'None'
   s.requires_arc          = true
   s.ios.deployment_target = '6.0'
@@ -38,8 +38,8 @@ Pod::Spec.new do |s|
     ss.vendored_library     = 'SDK/plugin/installtracker/libinstalltracker.a'
   end
 
-  spec.subspec 'Hybrid' do |ss|
-    ss.dependency       'QQMta/BasicAnalysis'
+  s.subspec 'Hybrid' do |ss|
+    ss.dependency       'QQMta/Core'
     ss.vendored_libraries   = "SDK/plugin/hybrid/*.a"
     ss.source_files       = "SDK/plugin/hybrid/*.h"
     ss.public_header_files    = "SDK/plugin/hybrid/*.h"
